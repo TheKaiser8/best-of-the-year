@@ -4,6 +4,7 @@ import org.lessons.bestoftheyear.model.Movie;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.ArrayList;
@@ -19,6 +20,20 @@ public class MovieController {
         model.addAttribute("movieList", bestMovies);
 
         return "movies-page";
+    }
+
+    // pagina dettaglio movie (id preso dinamicamente dal path)
+    @GetMapping("{id}")
+    public String movieDetail(@PathVariable int id, Model model) {
+        // recupero il Movie corrispondente all'id del path
+        String title = "unknown";
+        for(Movie movie : getBestMovies()) {
+            if(movie.getId() == id) {
+                title = movie.getTitle();
+            }
+        }
+        model.addAttribute("movie", title);
+        return "movie-detail";
     }
 
     private List<Movie> getBestMovies() {

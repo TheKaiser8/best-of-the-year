@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <th:block th:replace="fragments :: head"></th:block>
+  <title>Song detail</title>
+</head>
+<body>
+  <h1>Detail song n°<span th:text="${id}"></span></h1>
+  <div>
+    <span class="fw-bold">Title: </span>
+    <span th:text="${song}"></span>
+  </div>
+</body>
+</html>
