@@ -14,3 +14,14 @@ Aggiungere al controller altri due metodi, che rispondono agli url
 - “/songs”
 In ognuno di questi metodi aggiungere al Model un attributo stringa con una lista di titoli di migliori film o canzoni (in base al metodo che stiamo implementando) separati da virgole.
 Utilizzare i due metodi getBest… per recuperare i film e le canzoni. Creare i rispettivi template Thymeleaf.
+
+Continuiamo a lavorare sul nostro progetto Best of the year (anche stessa repo).
+Includere Bootstrap e fare il refactoring del layout come da mockup allegato, cercando di creare componenti riutilizzabili con i fragments (la navbar che vedete nel mockup è da implementare solo come bonus)
+Modificare i metodi che rispondono agli url
+- “/movies”
+- “/songs” in modo che i Model restituiscano una lista di oggetti (Movie o Song) invece di una stringa. Modificare anche le rispettive view.
+Ogni elemento mostrato nella lista (film o canzone) deve essere un link che punta alla rispettiva pagina di dettaglio. Implementare i controller relativi e il template che ne mostra tutti i campi.
+Nella pagina home (quella che risponde alla root dell’applicazione) aggiungere due link che portano agli url /movies e /songs.
+Nelle pagine con le liste aggiungere un link che riporta alla home page.
+Testare navigando l’applicazione.
+BONUS: implementare la navigazione tra aree dell’applicazione implementando una navbar, con i link per l’area di movies e songs. I link della navbar devono diventare active quando navighiamo una delle pagine dell’area corrispondente

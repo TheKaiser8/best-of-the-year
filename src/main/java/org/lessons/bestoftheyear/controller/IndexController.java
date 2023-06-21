@@ -1,5 +1,7 @@
 package org.lessons.bestoftheyear.controller;
 
+import org.lessons.bestoftheyear.model.Movie;
+import org.lessons.bestoftheyear.model.Song;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

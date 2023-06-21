@@ -1,10 +1,10 @@
-package org.lessons.bestoftheyear.controller;
+package org.lessons.bestoftheyear.model;
 
-public class Movie {
+public class Song {
     private final int id;
     private String title;
 
-    public Movie(int id, String title) {
+    public Song(int id, String title) {
         this.id = id;
         this.title = title;
     }
@@ -21,3 +21,4 @@ public class Movie {
         this.title = title;
     }
 }
+
